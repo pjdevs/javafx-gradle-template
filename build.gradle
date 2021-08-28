@@ -1,6 +1,5 @@
 plugins {
     id 'org.openjfx.javafxplugin' version '0.0.10'
-    id 'org.beryx.jlink' version '2.23.1'
 }
 
 version '0.0.1'
@@ -20,22 +19,9 @@ application {
     mainClass = 'javafxtest.Launcher'
 }
 
-jar {
-    manifest {
-        attributes 'Main-Class': 'javafxtest.Launcher'
-    }
-}
-
 javafx {
     version = '16'
     modules = [ 'javafx.controls' ]
-}
-
-jlink {
-    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
-    launcher {
-        name = 'javafxtest'
-    }
 }
 
 tasks.named('test') {

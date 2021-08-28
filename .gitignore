@@ -7,3 +7,5 @@ bin
 
 # Ignore vscode config
 .vscode
+.settings
+.project
